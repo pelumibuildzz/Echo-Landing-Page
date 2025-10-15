@@ -6,9 +6,16 @@
   --color-mid: #FFC37B;
   --color-light: #FEF5EA;
 
+  --color-sub-text: #363D4F;
+
   /* Animation colors */
   --color-anim-bg: #FFE1BC;
   --color-anim-mid: #FFD4A1;
+}
+
+.email-cta{
+  background: #FFF;
+  box-shadow: 0 0.4px 1px 0 rgba(102, 109, 128, 0.20), 0 0 0 1px #E9EBF1 inset;
 }
 
 .anim-back{
