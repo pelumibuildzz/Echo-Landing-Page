@@ -1,9 +1,10 @@
 import EchoAnimation from "@/components/echo-animation";
 import Navbar from "@/components/navbar";
+import Image from "next/image";
 
 const HeroScreen = () => {
   return (
-    <section className="w-screen md:px-28 md:pt-8 flex flex-col space-y-[77px] items-center">
+    <section className="w-screen md:px-28 md:pt-8 flex flex-col space-y-[77px] items-center hero-bg">
       <Navbar />
       <main className="flex flex-col space-y-5 py-[5px] px-[3px] items-center justify-center">
         <h3 className="text-center font-medium text-main text-[12px]">Make Waves. Be heard.</h3>
@@ -28,7 +29,7 @@ const HeroScreen = () => {
         </div>
       </main>
       {/* Big Image */}
-      
+      <Image src={'/Test Image.png'} width={1216} height={865} alt="Leak of Echo" />
     </section>
   );
 };
