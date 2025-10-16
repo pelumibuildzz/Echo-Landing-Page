@@ -25,7 +25,7 @@ const HeroScreen = () => {
              className="mr-auto md:w-[23vw]"
             />
           </div>
-          <button className="md:px-[27px] md:py-[15px] bg-light rounded-[20px]">Join the Waitlist!</button>
+          <button className="md:px-[27px] md:py-[15px] bg-mid cursor-pointer rounded-[20px]">Join the Waitlist!</button>
         </div>
       </main>
       {/* Big Image */}
