@@ -19,6 +19,11 @@
   background-size: cover;
 }
 
+.waitlist-bg{
+  background-image: url("/Background2.png");
+  background-size: cover;
+}
+
 .email-cta{
   background: #FFF;
   box-shadow: 0 0.4px 1px 0 rgba(102, 109, 128, 0.20), 0 0 0 1px #E9EBF1 inset;
