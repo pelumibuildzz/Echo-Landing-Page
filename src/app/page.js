@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import FaqScreen from "@/screens/faq-screen";
 import FeaturesScreen from "@/screens/features-screen";
 import HeroScreen from "@/screens/hero-screen";
@@ -12,6 +13,7 @@ export default function Home() {
       <HowItWorksScreen />
       <JoinWaitlistScreen />
       <FaqScreen />
+      <Footer />
     </div>
   );
 }
