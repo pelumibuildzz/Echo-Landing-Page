@@ -22,17 +22,17 @@ const features = [
 
 const FeaturesScreen = () => {
   return (
-    <section className="w-screen min-h-fit md:px-[184px] py-[119px]">
+    <section id="Features" className="w-screen min-h-fit md:px-[184px] py-[119px]">
         <main className="flex flex-col space-y-2.5 items-center self-stretch p-2.5">
             <div className="flex flex-col md:px-[42px] items-center space-y-3 self-stretch">
                 <h3 className="text-center font-medium text-main text-[12px]">Element of Change</h3>
-                <h1 className="text-center font-medium text-[58.25px] leading-[76.8px]">Our product has</h1>
-                <div className="flex space-x-3 items-center text-[58.25px]">
-                    <h1 className="text-center font-medium leading-[76.8px]">these big</h1>
+                <h1 className="text-center font-medium text-[32px] md:text-[58.25px] leading-[40px] md:leading-[76.8px]">Our product has</h1>
+                <div className="flex space-x-3 items-center text-[32px] md:text-[58.25px]">
+                    <h1 className="text-center font-medium leading-[40px] md:leading-[76.8px]">these big</h1>
                     <h1 className="text-white px-5 py-1 bg-main rounded-full shrink-0 text-center">features</h1>
                 </div>
             </div>
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center gap-20 md:gap-8 flex-col md:flex-row">
                 {features.map((feature, index) => (
                     <FeatureCard 
                         key={index}
