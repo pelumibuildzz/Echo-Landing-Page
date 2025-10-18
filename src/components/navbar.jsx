@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative min-w-max px-4 py-4 md:px-10 md:py-[22px] lg:space-x-[183px] md:flex md:items-center md:justify-between md:self-stretch md:rounded-full bg-white shadow-[0_0_0_5px_#FFF] border-[1px] border-border z-10 lg:mx-20 lg:absolute lg:top-0 lg:right-1/12">
+    <nav className="relative min-w-max px-4 py-4 md:px-10 md:py-[22px] lg:space-x-[183px] md:flex md:items-center md:justify-between md:self-stretch md:rounded-full bg-white shadow-[0_0_0_5px_#FFF] border-[1px] border-border z-10 max-w-full">
       {/* Logo and Hamburger Container */}
       <div className="flex justify-between items-center md:justify-start">
         <div>

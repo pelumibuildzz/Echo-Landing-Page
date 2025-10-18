@@ -1,4 +1,4 @@
-'use-client'
+'use client'
 
 import Image from 'next/image'
 import Link from 'next/link';
@@ -13,6 +13,8 @@ const Footer = () => {
             if (element) {
                 element.scrollIntoView({ behavior: "smooth" });
             }
+        }else{
+            console.log("window is undefined");
         }
     };
 
@@ -25,9 +27,9 @@ const Footer = () => {
                   <p className='text-[14px] leading-6 -tracking-[.09px]'>Let&apos;s build the future together, with the right tool.</p>
                 </div>
                 <ul className="flex flex-col md:flex-row items-center md:items-start gap-8 min-w-fit">
-                    <li className="text-center cursor-pointer" onClick={scrollToSection("#Home")}>Home</li>
-                    <li className="text-center cursor-pointer" onClick={scrollToSection("#Features")}>Features</li>
-                    <li className="text-center cursor-pointer" onClick={scrollToSection("#HowItWorks")}>How it works</li>
+                    <li className="text-center cursor-pointer" onClick={() => scrollToSection("#Home")}>Home</li>
+                    <li className="text-center cursor-pointer" onClick={() => scrollToSection("#Features")}>Features</li>
+                    <li className="text-center cursor-pointer" onClick={() => scrollToSection("#HowItWorks")}>How it works</li>
                 </ul>
             </div>
 
