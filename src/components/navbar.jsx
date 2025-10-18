@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative px-4 py-4 md:px-10 md:py-[22px] md:space-x-[183px] md:flex md:items-center md:self-stretch md:rounded-full bg-white shadow-[0_0_0_5px_#FFF] border-[1px] border-border">
+    <nav className="relative min-w-max px-4 py-4 md:px-10 md:py-[22px] lg:space-x-[183px] md:flex md:items-center md:justify-between md:self-stretch md:rounded-full bg-white shadow-[0_0_0_5px_#FFF] border-[1px] border-border z-10 lg:mx-20 lg:absolute lg:top-0 lg:right-1/12">
       {/* Logo and Hamburger Container */}
       <div className="flex justify-between items-center md:justify-start">
         <div>
@@ -44,7 +44,7 @@ const Navbar = () => {
       {/* Navigation Menu */}
       <ul className={`
         absolute top-full left-0 right-0 mt-2 bg-white border border-border rounded-lg shadow-lg p-4 space-y-4
-        md:relative md:top-auto md:left-auto md:right-auto md:mt-0 md:bg-transparent md:border-none md:shadow-none md:p-0 md:space-y-0
+        md:relative  md:mt-0 md:bg-transparent md:border-none md:shadow-none md:p-0 md:space-y-0
         md:flex md:justify-center md:items-end md:space-x-[19px]
         ${isMenuOpen ? 'block' : 'hidden md:flex'}
       `}>

@@ -34,7 +34,7 @@ const FaqScreen = () => {
             <div className='w-full relative'>
                 <FaqAcordion faqs={Faqs}/>
                 {/* Echo Monochrome Bg */}
-                <div className="absolute flex items-center justify-center top-0 md:-top-1/5 md:right-1/4 z-0 ">
+                <div className="absolute flex items-center justify-center top-0 lg:-top-1/5 md:right-1/12 lg:right-1/4 z-0 ">
                     <Image src={'/Echo Mono Bg.png'} alt="Echo background" width={444} height={444}/>
                 </div>
             </div>

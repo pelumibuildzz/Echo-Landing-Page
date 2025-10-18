@@ -20,16 +20,16 @@ const Steps = [
 
 const HowItWorksScreen = () => {
   return (
-    <section id="HowItWorks" className="bg-light w-screen py-[30px] md:px-[215px] flex flex-col space-y-[42px] items-center justify-center self-stretch">
+    <section id="HowItWorks" className="bg-light w-screen py-[30px] lg:px-[215px] flex flex-col space-y-[42px] items-center justify-center self-stretch">
         <div className="flex flex-col items-center space-y-[15px]">
             <div>
                 <h3 className="text-center font-medium text-main text-[12px]">How it works?</h3>
-                <h1 className="text-[28px] md:text-[40px] font-bold md:leading-[60%] text-center -tracking-[1.2px] mt-[21px]">A Few Easy Steps to Start Making Change</h1>
+                <h1 className="text-[28px] md:text-[40px] font-bold lg:leading-[60%] text-center -tracking-[1.2px] mt-[21px]">A Few Easy Steps to Start Making Change</h1>
             </div>
             <h5 className="md:w-[49vw] text-dark-gray text-center text-[16px] md:text-[20px] md:leading-[150%] -tracking-[0.4px] px-2">In just a few simple steps, you're ready to use the instrument of change. Make a difference, amplify your voice, and let your impact be heard.</h5>
         </div>
 
-        <div className="flex items-center md:items-start gap-[66px] flex-wrap space-y-10 justify-center">
+        <div className="flex items-center md:items-start gap-[66px] lg:flex-row flex-col space-y-10 justify-center">
             {Steps.map((step, index) => (
                 HowItWorksSteps({
                     key: index,

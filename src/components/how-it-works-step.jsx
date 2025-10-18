@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const HowItWorksSteps = ({index, imgUrl, heading, description}) => {
   return (
-    <div key={index} className="flex flex-col items-center text-center md:w-[20vw] max-w-full">
+    <div key={index} className="flex flex-col items-center text-center md:w-[60vw] lg:w-[20vw] max-w-full">
       <div className="md:max-w-[20vw] relative overflow-hidden rounded-2xl">
         <Image className="" width={200} height={200} src={imgUrl}  alt={heading}/>
       </div>

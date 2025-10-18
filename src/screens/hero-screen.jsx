@@ -1,15 +1,13 @@
 import EchoAnimation from "@/components/echo-animation";
-import Navbar from "@/components/navbar";
 import Image from "next/image";
 
 const HeroScreen = () => {
   return (
     <section id="Home" className="w-screen md:px-28 md:pt-8 flex flex-col space-y-[77px] items-center hero-bg">
-      <Navbar />
       <main className="flex flex-col space-y-5 py-[5px] px-[3px] items-center justify-center">
         <h3 className="text-center font-medium text-main text-[12px]">Make Waves. Be heard.</h3>
         <div className="flex flex-col items-center gap-y-2.5 leading-[76.8px] md:leading-[76.8px]">
-          <h1 className="text-center font-medium text-[32px] md:text-[58.25px]">A System,Tool & Voice</h1>
+          <h1 className="text-center font-medium text-[32px] md:text-[58.25px] text-nowrap">A System,Tool & Voice</h1>
           <div className="flex space-x-3 items-center max-h-[84px]">
             <h1 className="text-center font-medium text-[32px] md:text-[58.25px]">that Listens</h1>
             <EchoAnimation/>

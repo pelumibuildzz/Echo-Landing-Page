@@ -3,18 +3,18 @@ import Image from "next/image"
 const JoinWaitlistScreen = () => {
   return (
     <section id="JOIN" className="flex flex-col items-start self-stretch px-[7.7vw] md:py-[138px] py-20 waitlist-bg">
-        <main className="flex justify-between items-center w-full flex-wrap gap-10 md:gap-0">
-            <div className="flex flex-col items-start shrink-0 space-y-[13px] md:w-[34vw] max-w-full">
+        <main className="flex md:flex-col lg:flex-row justify-between items-center w-full flex-wrap gap-10 md:gap-0">
+            <div className="flex flex-col items-start shrink-0 space-y-[13px] lg:w-[34vw] max-w-full">
                 <h3 className="font-medium text-center w-full text-main text-[14px] md:leading-6 md:-tracking-[.18px]">Start building the future now!</h3>
-                <h1 className="font-medium text-[28px] md:text-[43px] md:-tracking-[1.25px] md:leading-[36px] md:md:leading-[58px]">Join the Wait-list Now!</h1>
+                <h1 className="font-medium text-[28px] md:text-[43px] md:-tracking-[1.25px] md:leading-[36px]">Join the Wait-list Now!</h1>
                 <h4 className="text-sub-text text-[16px] md:leading-8 md:-tracking-[.18px]">Experience the Echo difference and unlock the true potential</h4>
             </div>
-            <div className="flex md:w-[32vw] flex-col items-start space-y-[22px] shrink-0 w-full">
+            <div className="flex md:w-[50vw] lg:w-[32vw] flex-col items-start space-y-[22px] shrink-0 w-full">
                 <div className="flex self-stretch gap-4 w-full flex-col md:flex-row max-w-full">
                     <div className="flex items-center justify-center p-4 rounded-full shadow-[0px_0.4000000059604645px_1px_0px_rgba(102,109,128,0.20)] w-full  ">
                         <input type="email" name="email" placeholder="name@example.com" className=" text-[16px] md:leading-normal w-full" />
                     </div>
-                    <button className="md:w-[12vw] flex items-center justify-center bg-main rounded-full overflow-hidden cursor-pointer">
+                    <button className="md:w-[12vw] flex items-center justify-center md:p-2 lg:p-0 bg-main rounded-full overflow-hidden cursor-pointer">
                         <span className="text-center justify-center text-white text-base font-medium md:leading-tight">Join Now!</span>
                     </button>
                 </div>
