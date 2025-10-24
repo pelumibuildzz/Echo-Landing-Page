@@ -1,8 +1,13 @@
+"use client";
+
 import EchoAnimation from "@/components/echo-animation";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
+import { useWaitlist } from "@/hooks/useWaitlist";
 
 const HeroScreen = () => {
+  const { email, setEmail, isLoading, message, isSuccess, submitToWaitlist } = useWaitlist();
+
   return (
     <section id="Home" className="max-w-screen md:px-10 lg:px-28 md:pt-8 flex flex-col space-y-[77px] items-center hero-bg">
       <Navbar />
@@ -19,14 +24,32 @@ const HeroScreen = () => {
           <h4 className="leading-8">Let&apos;s build the future together, We don&apos;t just need a</h4>
           <h4>Voice - We Need a System That Listens</h4>
         </div>
-        <div className="flex justify-center gap-2.5 md:items-start self-stretch flex-col md:flex-row items-center">
+        <form onSubmit={submitToWaitlist} className="flex justify-center gap-2.5 md:items-start self-stretch flex-col md:flex-row items-center">
           <div className="p-4 flex items-start rounded-full email-cta">
-            <input type="email" name="email" placeholder="name@email.com"
-             className="mr-auto md:w-[23vw]"
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="name@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={isLoading}
+              className="mr-auto md:w-[23vw]"
             />
           </div>
-          <button className=" p-2 md:px-[27px] md:py-[15px] bg-mid cursor-pointer rounded-[20px]">Join the Waitlist!</button>
-        </div>
+          <button 
+            type="submit" 
+            disabled={isLoading}
+            className=" p-2 md:px-[27px] md:py-[15px] bg-mid cursor-pointer rounded-[20px] disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {isLoading ? 'Joining...' : 'Join the Waitlist!'}
+          </button>
+        </form>
+        {message && (
+          <div className={`text-center text-sm ${isSuccess ? 'text-green-600' : 'text-red-600'}`}>
+            {message}
+          </div>
+        )}
       </main>
       {/* Big Image */}
       <Image src={'/Test Image.png'} width={1216} height={865} alt="Leak of Echo" />

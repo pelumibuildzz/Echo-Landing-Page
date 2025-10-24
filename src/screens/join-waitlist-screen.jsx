@@ -1,6 +1,11 @@
-import Image from "next/image"
+"use client";
+
+import Image from "next/image";
+import { useWaitlist } from "@/hooks/useWaitlist";
 
 const JoinWaitlistScreen = () => {
+  const { email, setEmail, isLoading, message, isSuccess, submitToWaitlist } = useWaitlist();
+
   return (
     <section id="JOIN" className="flex flex-col items-start self-stretch px-[7.7vw] md:py-[138px] py-20 waitlist-bg">
         <main className="flex md:flex-col lg:flex-row justify-between items-center w-full flex-wrap gap-10 md:gap-0">
@@ -10,14 +15,34 @@ const JoinWaitlistScreen = () => {
                 <h4 className="text-sub-text text-[16px] md:leading-8 md:-tracking-[.18px]">Experience the Echo difference and unlock the true potential</h4>
             </div>
             <div className="flex md:w-[50vw] lg:w-[32vw] flex-col items-start space-y-[22px] shrink-0 w-full">
-                <div className="flex self-stretch gap-4 w-full flex-col md:flex-row max-w-full">
+                <form onSubmit={submitToWaitlist} className="flex self-stretch gap-4 w-full flex-col md:flex-row max-w-full">
                     <div className="flex items-center justify-center p-4 rounded-full shadow-[0px_0.4000000059604645px_1px_0px_rgba(102,109,128,0.20)] w-full  ">
-                        <input type="email" name="email" placeholder="name@example.com" className=" text-[16px] md:leading-normal w-full" />
+                        <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="name@example.com" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                            disabled={isLoading}
+                            className=" text-[16px] md:leading-normal w-full" 
+                        />
                     </div>
-                    <button className="md:w-[12vw] flex items-center justify-center md:p-2 lg:p-0 bg-main rounded-full overflow-hidden cursor-pointer">
-                        <span className="text-center justify-center text-white text-base font-medium md:leading-tight">Join Now!</span>
+                    <button 
+                        type="submit"
+                        disabled={isLoading}
+                        className="md:w-[12vw] flex items-center justify-center md:p-2 lg:p-0 bg-main rounded-full overflow-hidden cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                        <span className="text-center justify-center text-white text-base font-medium md:leading-tight">
+                            {isLoading ? 'Joining...' : 'Join Now!'}
+                        </span>
                     </button>
-                </div>
+                </form>
+                {message && (
+                    <div className={`text-center text-sm w-full ${isSuccess ? 'text-green-600' : 'text-red-600'}`}>
+                        {message}
+                    </div>
+                )}
                 <div className="flex items-center gap-[21px] self-stretch flex-col md:flex-row">
                     <div className="flex items-center gap-3">
                         <Image src={'/icons/check.png'} width={24} height={24} alt="check icon" />

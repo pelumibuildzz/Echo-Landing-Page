@@ -1,3 +1,5 @@
+"use client";
+
 import Footer from "@/components/footer";
 import FaqScreen from "@/screens/faq-screen";
 import FeaturesScreen from "@/screens/features-screen";
